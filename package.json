@@ -4,7 +4,8 @@
   "description": "This is an api storing details regarding countries accross the globe",
   "main": "serverapi.js",
   "scripts": {
-    "server": "nodemon serverapi.js"
+    "server": "nodemon serverapi.js",
+    "start":"node serverapi.js"
   },
   "author": "Ansubha Dhar",
   "license": "ISC",
