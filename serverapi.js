@@ -8,7 +8,7 @@ const jsondatafile="./public/data.json";
 
 //Rest API CRUD operations
 
-app.use(express.static("./public"));
+
 app.use(express.urlencoded({extended:false}));
 
 
