@@ -9,7 +9,7 @@
     "routes": [
         {
             "src": "/api/countryinfo(.*)",
-            "dest": "data.js"
+            "dest": "serverapi.js"
         },
         {
             "src": "/api/countryinfo/:nationcode(.*)",
