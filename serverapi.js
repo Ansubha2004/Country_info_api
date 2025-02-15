@@ -2,7 +2,8 @@ const express=require('express');
 const app=express();
 const datas=require('./public/data.json');
 const fs=require('fs');
-const port=process.env.Port || 8008;
+require("dotenv").config();
+const port=process.env.PORT || 8008;
 const jsondatafile="./public/data.json";
 
 //Rest API CRUD operations
