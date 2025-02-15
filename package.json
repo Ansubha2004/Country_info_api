@@ -9,8 +9,7 @@
   "author": "Ansubha Dhar",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2",
-    "vercel": "^41.1.4"
+    "express": "^4.21.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"

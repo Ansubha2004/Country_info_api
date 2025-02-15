@@ -1,6 +1,0 @@
-{
-    "version": 2,
-    "builds": [{ "src": "data.js", "use": "@vercel/node" }],
-    "routes": [{ "src": "/api/countryinfo/(.*)", "dest": "data.js" }]
-  }
-  
