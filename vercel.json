@@ -1,13 +1,16 @@
 {
     "version": 2,
+    "builds": [
+        {
+            "src": "serverapi.js",
+            "use": "@vercel/node"
+        }
+    ],
     "routes": [
         {
-            "src": "/api/countryinfo(.*)",
-            "dest": "serverapi.js"
-        },
-        {
-            "src": "/api/countryinfo/:nationcode(.*)",
+            "src": "/api/countryinfo/(.*)",
             "dest": "serverapi.js"
         }
+      
     ]
 }
