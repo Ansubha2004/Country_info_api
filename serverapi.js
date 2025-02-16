@@ -1,6 +1,7 @@
 const express=require('express');
 const app=express();
 const datas=require('./public/data.json');
+const cors=require("cors");
 const fs=require('fs');
 require("dotenv").config();
 const port=process.env.PORT || 8008;
@@ -10,6 +11,7 @@ const jsondatafile="./public/data.json";
 
 
 app.use(express.urlencoded({extended:false}));
+app.use(cors());
 
 
 app.route("/api/countryinfo")
@@ -48,8 +50,6 @@ app.route("/api/countryinfo/:nationcode")
 app.all("*",(req,res)=>{
     return res.status(404).send("Server Error..");
 });
-
-
 
 app.listen(port,()=>{
     console.log('Responding to server API....');
