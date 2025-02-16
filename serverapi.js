@@ -6,17 +6,19 @@ const fs=require('fs');
 require("dotenv").config();
 const port=process.env.PORT || 8008;
 const jsondatafile="./public/data.json";
+const path=require('path');
 
 //Rest API CRUD operations
 
 
 app.use(express.urlencoded({extended:false}));
 app.use(cors());
+app.use(express.static('./public'));
 
 
 app.route("/api/countryinfo")
 .get((req,res)=>{
-    return res.status(200).json(datas);
+    return res.status(200).sendFile(path.resolve(__dirname,"public","data.html"));
 })
 .post((req,res)=>{
     const body=req.body;
